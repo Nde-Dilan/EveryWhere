@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	 html,body{
+	 margin: 0px;
+     padding:0px;
+     }
+     #main-content
+     {
+     	width: 100vw;
+     	height: 100vh;
+     }
+     body *{
+     	font-family: Ubuntu;
+     }
+	</style>
+</head>
+<body>
+	<div id="main-content">
+		<section style="width: 100%;height: 100%; background-image: url('img7.webp');background-size: cover;">
+			<nav style="width:100%;height:10%;background-color: rgba(30,30,30,0.7);display: flex; justify-content:space-between;">
+
+				<div style="display: flex; justify-content: center;flex-direction: column; color:white;width: 10%;height: 100%;text-align: center;font-size: 18px;">
+					Agora
+				</div>
+				<div style="display:flex;color:white;font-weight: bold; font-size:16px;text-transform: capitalize;text-align: center;height: 100%;">
+					<div style="display:flex;flex-direction: column;justify-content: center;height:100%;"><div style="margin-right: 10px;"> Accueil</div></div>
+					<div style="display:flex;flex-direction: column;justify-content: center;height:100%;"><div style="margin-right: 10px;"> Exercices</div></div>
+					<div style="display:flex;flex-direction: column;justify-content: center;height:100%;"><div style="margin-right: 10px;"> Recherches</div></div>
+					<div style="display:flex;flex-direction: column;justify-content: center;height:100%;"><div style="margin-right: 10px;"> Rubriques</div></div>
+					<div style="display:flex;flex-direction: column;justify-content: center;height:100%;padding-right: 10px;"><div style="display:flex;color:black;background-color: white;border-radius: 5px;padding: 10px;"> poster un exo</div></div>
+				</div>
+
+			</nav>
+			<div style="color: white;flex-direction:column ;justify-content: center;height: 90%;display: flex;">
+			<h1 style="text-transform: uppercase;text-align: center;">L'agora</h1>
+			<div style="text-transform: none;text-align: center;font-size: 20px;">la plateforme pour regrouper tous les amoureux de la science</div>
+			<div style="text-align:center;margin-top: 15px;">
+				<input id='input1' type="text">
+				<input id= 'input3' type="text" style="width:10px;height:20px" >
+				<input id = 'input2' type="text">
+				<span style="background-color:red;padding:5px;" onclick="launchCalcul()"> Calculer </span>
+
+			</div>
+			</div>
+		</section>
+
+	</div>
+	<div style="min-height:200px;">
+		<div id='result1'> </div>
+	</div>
+
+</body>
+<script>
+
+	function launchCalcul(){
+		var input1 = document.getElementById('input1');
+		var input2 = document.getElementById('input2');
+		var result1 = document.getElementById('result1');
+		var somme = parseInt(input1.value)+parseInt(input2.value);
+		var input3= document.getElementById('input3');
+		var solution;
+		if (input3.value == "*"){ 
+		 	solution = parseInt(input1.value)*parseInt(input2.value);
+		}
+		else if ( input3.value == "/"){
+			solution = parseInt(input1.value)/parseInt(input2.value);
+		}
+		else if ( input3.value == "-"){
+			solution = parseInt(input1.value)-parseInt(input2.value);
+		}
+		else if ( input3.value == "+"){
+			solution = parseInt(input1.value)+parseInt(input2.value);
+		}
+
+      result1.textContent = solution; 
+
+	}
+</script>
