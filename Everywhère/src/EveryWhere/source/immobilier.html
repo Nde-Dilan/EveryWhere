@@ -1,0 +1,163 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="uft-8">
+			<title>EveryWhere - Trouver votre chez vous partout </title>
+			<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+			
+		</head> 
+		<style type="text/css">
+		html,body{
+	 	margin: 0px;
+     	padding:0px;
+     	font-family: ubuntu;
+		width:100%;
+     	}
+     	#affiche{
+     		display:none;
+     	}
+		body *{
+			font-family:'Source Sans Pro';
+		}
+		.txt-center{
+			text-align:center;
+		}
+		.h1{
+			font-size:40px;
+		}
+		.text-purple{
+			color:fuchsia; /* #8d53df; */
+		}
+		.text-white{
+			color:#fff;
+		 }
+		.bg-purple{
+			background-color:fuchsia; /* #8d53df; */
+		}
+		.bg-white{
+			background-color:#fff; /* #8d53df; */
+		}
+		/*.shadow1{
+			text-shadow: 2px 2px 4px #fff;
+		}*/
+     </style>
+		<body>
+			<div id="contenu" style="width:100%;height: 100vh;">				
+				<nav style="width:100%;height:10%;display: flex; justify-content:space-between;background-color: white;">
+					<div style="display: flex; justify-content: center;flex-direction: column; color:black;width: 10%;height: 100%;text-align: center;font-size: 18px;font-weight: bold;">
+						<div style='display:flex'>
+							<div> <img style='width:30px;height:30px;' src='letter_e.png'> </div>
+							<div> verywhere </div>
+						</div>
+					</div>
+					<div style="display: flex; justify-content: center;flex-direction: column;padding-right:10px;">
+						<div><i class='fas fa-2x fa-bars text-purple'></i></div>
+					</div>
+				</nav>
+				<section style="width: 100%;height: 100%;">
+					<div style='position:absolute;width:100%;'>
+						<div style='text-align:center;width:100%;padding-top:10%;' class='txt-center h1 shadow1'> Trouvez votre chez-vous partout </div>
+						<div style='text-align:center;width:100%;padding-top:1%;'>Plus de <b class='text-purple'>1200 offres</b> disponibles </div>
+						<div style='width:100%;' class='d-flex flex-column justify-content-center'>
+							<div class='d-flex justify-content-center p-2'>
+								<a class='d-block bg-primary text-center text-white' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;" id="louer"> Louer un Espace</a>
+							</div>
+							<div class='d-flex justify-content-center p-2'>
+								<a class='d-block bg-success text-center text-white ' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;" id="louer"> declarer une offre</a>
+							</div>
+						</div>
+					</div>
+				
+					<div style="display:flex;width: 100%;height: 70%;flex-wrap:wrap;">
+						<div style="background-image: url('back1.jpg'); width: 50%;height: 100%;display: flex;justify-content: center;flex-direction: column;text-align: center;background-size: cover;">
+							<div style="display: flex;justify-content: center;flex-direction: column;padding-top:50px;width:100%;height:100%;background:rgba(250,250, 250, 0.5);">
+								
+							</div>
+						</div>
+						<div style="background-image: url('back2.jpg');width: 50%;height: 100%;display: flex;justify-content: center;flex-direction: column;text-align: center;background-repeat: no-repeat;background-size: cover;">
+							<div style="display: flex;justify-content: center;flex-direction: column;padding-top:50px;width:100%;height:100%;background:rgba(250,250, 250, 0.5);">
+
+							</div>
+						</div>
+					</div>
+					
+					<div style='display:flex;justify-content:center;flex-direction:column;width:100%;'>
+						<div style='display:flex;justify-content:center;padding:15px;'>
+							<div style='padding:5px;'>
+								<div style='width:75px;height:75px;border-radius:100%;background:#ddd;' class='txt-center text-purple'> <i style='margin-top:20px;' class='fa-2x fas fa-dollar-sign'> </i> </div>
+							</div>
+							<div style='padding:5px;'>
+								<div style='width:75px;height:75px;border-radius:100%;background:#ddd;' class='txt-center text-purple'> <i style='margin-top:20px;' class='fa-2x fas fa-home'> </i> </div>
+							</div>
+							<div style='padding:5px;'>
+								<div style='width:75px;height:75px;border-radius:100%;background:#ddd;' class='txt-center text-purple'> <i style='margin-top:20px;' class='fa-2x fas fa-file'> </i> </div>
+							</div>
+							<div style='padding:5px;'>
+								<div style='width:75px;height:75px;border-radius:100%;background:#ddd;' class='txt-center text-purple'> <i style='margin-top:20px;' class='fa-2x fas fa-handshake'> </i> </div>
+							</div>
+						</div>
+						<div  class='text-center mt-1'> De nombreux critères pour sélectionner le plan Immobilier qu'il vous faut. </div>
+					</div>
+					
+
+					
+					<!--
+					<section style='height:30%;'>
+						<div style="display:flex;text-align: center;flex-direction: column;justify-content: center;text-transform: capitalize;"><h3>vous pouvez choisir par</h3></div>
+						<div style="display:flex;justify-content: center;">
+							<div style="margin-right: 20px;background-color: pink;width: 100px;height: 110px;border-radius: 10px;justify-content: center;text-align: center;flex-direction: column;display: flex;">
+								<center><img src="imgD.jpg" style="width:40px;height: 40px;"></center>
+
+							<div style="text-align:center;justify-content: center;flex-direction: column;display: flex;text-transform: capitalize;">prix</div>
+							</div>
+							<div style="margin-right: 20px;background-color: pink;width: 100px;height: 110px;border-radius: 10px;justify-content: center;text-align: center;flex-direction: column;display: flex;">
+								<center><img src="imgF.jpg" style="width:40px;height: 40px;"></center>
+								
+							<div style="text-align:center;justify-content: center;flex-direction: column;display: flex;text-transform: capitalize;">ville</div>
+							</div>
+							<div style="margin-right: 20px;background-color: pink;width: 100px;height: 110px;border-radius: 10px;justify-content: center;text-align: center;flex-direction: column;display: flex;">
+								<center><img src="imgH.jpg" style="width:40px;height: 40px;"></center>
+								
+							<div style="text-align:center;justify-content: center;flex-direction: column;display: flex;text-transform: capitalize;">motif</div>
+							</div>
+							<div style="margin-right: 20px;background-color: pink;width: 100px;height: 110px;border-radius: 10px;justify-content: center;text-align: center;flex-direction: column;display: flex;">
+								<center><img src="imgG.jpg" style="width:40px;height: 40px;"></center>
+								
+							<div style="text-align:center;justify-content: center;flex-direction: column;display: flex;text-transform: capitalize;">type</div>
+							</div>
+
+						</div>
+					</section>
+					-->
+					</section>
+					<div class='d-flex  p-2'>
+						<div class=''> Copyright <a href="https://xerxes.cm"> Xerxes </a> </div>
+						<div class='d-flex text-secondary'>
+							<div class='px-3'> Documentation </div>
+							<div> Contact </div>
+						</div> 
+					</div>
+					</body><!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+							<script type="text/javascript">
+						/*function affiche(){
+							var louer=document.getElementById('louer')
+							louer.value=
+						}*/
+						var louer=document.getElementById('louer');
+						var affiche=document.getElementById('affiche')
+						var fermer=document.getElementById('fermer')
+						louer.onclick = function (){
+							affiche.style.display = "block";
+						}
+						fermer.onclick=function(){
+							affiche.style.display="none";
+						}
+					</script>
+		
+			
+		
+			<!-- Prix Ville, Motif Type -->

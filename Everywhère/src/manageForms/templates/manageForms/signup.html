@@ -1,0 +1,67 @@
+{% extends 'manageForms/base.html' %}
+{% load static %}
+{% block title %}
+<title>Register your EveryWhere Account</title>
+{% endblock %}
+{% block form%}
+{% block message  %}
+
+{% endblock %}
+
+
+    <div class="container">
+        <div class="card center spacer">
+            <h1 style="text-align:center;" class="title text-center">Register With</h1>
+            <div class="social-login">
+                <button class="social-btn">
+                    <img class="icon" src="{% static 'icons/gmail.svg' %}" alt="gmail icon">
+                    Gmail
+                </button>
+                <button class="social-btn">
+                    <img class="icon" src="{% static 'icons/facebook.svg' %}" alt="gmail icon">
+                    Facebook
+                </button>
+            </div>
+            <div class="text-center line form-divider">ou</div>
+            <form method="POST" action="" class="login-form spacer" id="signup-form">
+                {% csrf_token %}
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'icons/profile-user.svg' %}" alt="">
+                    {{ form.username }}
+
+                </div>
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'icons/envelope.png' %} " alt="">
+
+                       <!--Champ email-->
+                     {{ form.email }}
+
+                </div>
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'icons/key.svg' %}" alt="">
+                       <!--Champ password-->
+                    {{ form.password1 }}
+                </div>
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'icons/key.svg' %}" alt="">
+                       <!--Champ password-->
+                    {{ form.password2 }}
+
+                </div>
+                <input type="submit" class="submit" value="Signup">
+            </form>
+
+        </div>
+
+
+    </div>
+
+    <div class="redirect">
+       Vous avez déjà un compte?&nbsp<a href="{% url 'form-login' %}" class="link">Login</a>
+        <br><br>
+
+
+    </div>
+{% endblock %}
+
+

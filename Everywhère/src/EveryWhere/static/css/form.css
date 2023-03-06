@@ -1,0 +1,68 @@
+body{
+    background:url('./Leave-10s-1366px.svg');
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    flex-direction: column;
+}
+form{
+background-color:red;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 25px 9px 0px 19px  ;
+    flex-direction: column;
+    border: 3px solid rgb(246, 149, 117);
+    border-radius: 15px;
+    width: 270px;
+    height: 450px;
+}
+input{
+    border-radius: 8px;
+    border: none;
+    margin: 10px;
+}
+button{
+    cursor: pointer;
+
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#_{
+    background-color: rgb(68, 238, 68);
+    border: none;
+    color: rgb(225, 255, 0);
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    border-radius: .4rem;
+}
+h2{
+    text-align: center;
+}
+#__{
+    background-color: rgb(238, 68, 170);
+    border: none;
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    border-radius: .3rem;
+}
+p:nth-child(2){
+    font-family: Forte;
+    font-size: 1.5rem;
+}
+.footer{
+    font-weight: bold;
+    margin: 70px 0 20px 0;
+    color: rgb(235, 219, 219);
+    letter-spacing: .5rem;
+}

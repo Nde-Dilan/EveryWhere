@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% block title%} <title>Login</title> {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'css/scripts.js' %}" defer></script>
+</head>
+<body>
+{% block message  %}
+     <!--messages-->
+    <div class="messages">
+        <img class="message-icon" src="{% static 'icons/sign.svg' %}" alt="error">
+        <div class="message">
+            <h3 class="message-title title">Error</h3>
+            <p class="message-paragraph">Something went wrong!</p>
+        </div>
+        <span class="message-close error">x</span>
+    </div>
+    <!--end messages-->
+{% endblock %}
+
+   {% block form%}
+   {% block username&password %}  {% endblock %}
+   {% endblock %}
+
+</body>
+
+</html>
