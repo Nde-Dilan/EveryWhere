@@ -5,4 +5,6 @@ app_name = 'main'
 
 urlpatterns = [
     path('', index, name='index'),
+#    path('',index,name ='index'),
+
 ]

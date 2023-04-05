@@ -41,3 +41,11 @@ class Salle(admin.ModelAdmin):
 @admin.register(Terrain)
 class Terrain(admin.ModelAdmin):
     pass
+
+
+@admin.register(PlanImmobilier)
+class PlanImmobilier(admin.ModelAdmin):
+    pass
+@admin.register(TypeHSE)
+class TypeHSE(admin.ModelAdmin):
+    pass

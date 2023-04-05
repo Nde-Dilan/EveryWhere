@@ -68,3 +68,28 @@ class Studio(models.Model):
     Nombre_appartements = models.IntegerField(default=1)
     description = models.TextField()
     Duree_location = models.TextField()
+
+class PlanImmobilier(models.Model):
+     code = models.CharField(max_length=15)
+     nom = models.CharField(max_length=19)
+     description = models.TextField(blank=True, null=True)
+     image = models.FileField(blank=True)
+     def __str__(self):
+        return self.nom
+
+class TypeHSE(models.Model):
+    nom = models.CharField(max_length=19)
+    image = models.FileField(blank=True)
+    type_plan = models.ForeignKey(PlanImmobilier, on_delete=models.CASCADE)
+    description = models.TextField()
+    def __str__(self):
+        return self.nom
+
+    
+# terrain = ["Terrain en Lotissement","Terrain en diffus","Terrain à Bâtir","Terrain agricole",]
+# HSE = ["Chambre","Studio","Appartement","Maison Complete","Villa","Immeuble"," Château","VEFA"]
+# salle=["Salle Polyvalente","Chapiteau","Peniche","Villa","Hôtel",]
+# print(PlanImmobilier.objects.all()[0])
+# # for i in salle:
+# #    TypeHSE.objects.create(nom=i, type_plan=PlanImmobilier.objects.all()[2], description="Une salle pour vos besoin")
+   
