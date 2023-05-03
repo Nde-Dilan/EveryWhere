@@ -89,7 +89,7 @@ class TypeHSE(models.Model):
 # terrain = ["Terrain en Lotissement","Terrain en diffus","Terrain à Bâtir","Terrain agricole",]
 # HSE = ["Chambre","Studio","Appartement","Maison Complete","Villa","Immeuble"," Château","VEFA"]
 # salle=["Salle Polyvalente","Chapiteau","Peniche","Villa","Hôtel",]
-# print(PlanImmobilier.objects.all()[0])
-# # for i in salle:
-# #    TypeHSE.objects.create(nom=i, type_plan=PlanImmobilier.objects.all()[2], description="Une salle pour vos besoin")
+# # print(PlanImmobilier.objects.all()[0])
+# for i in HSE:
+#    TypeHSE.objects.create(nom=i, type_plan=PlanImmobilier.objects.all()[3], description="Une maison pour vos besoin")
    

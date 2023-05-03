@@ -1,6 +1,7 @@
 <!doctype html>
 {% load static %}
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,118 +9,159 @@
 	<link rel="shortcut icon" href="{% static 'xerxesbook/images/read-book.ico' %}" type="image/x-icon">
 	<meta charset="utf-8">
 	<title>EveryWhere - Trouver votre chez vous partout </title>
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">			
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-</head> 
+</head>
 <style type="text/css">
-	html,body{
+	html,
+	body {
 		margin: 0px;
-		padding:0px;
-		font-family: Ubuntu,Corbel,sans-serif;
-		width:100%;
+		padding: 0px;
+		font-family: Ubuntu, Corbel, sans-serif;
+		width: 100%;
 	}
-	#affiche{
-		display:none;
+
+	#affiche {
+		display: none;
 	}
-	body *{
-		font-family:'Source Sans Pro';
+
+	body * {
+		font-family: 'Source Sans Pro';
 	}
-	.txt-center{
-		text-align:center;
+
+	.txt-center {
+		text-align: center;
 	}
-	.h1{
-		font-size:40px;
+
+	.h1 {
+		font-size: 40px;
 	}
-	.text-purple{
-		color:fuchsia; /* #8d53df; */
+
+	.text-purple {
+		color: fuchsia;
+		/* #8d53df; */
 	}
-	.border-purple{
+
+	.border-purple {
 		border: 1px solid fuchsia;
 	}
-	.text-white{
-		color:#fff;
+
+	.text-white {
+		color: #fff;
 	}
-	.bg-purple,.btn-purple{
-		background-color:fuchsia;
-		cursor:pointer; /* #8d53df; */
+
+	.bg-purple,
+	.btn-purple {
+		background-color: fuchsia;
+		cursor: pointer;
+		/* #8d53df; */
 		transition: all 0.3s ease;
-		color:white;
+		color: white;
 	}
-	.bg-purple:hover{
-		background-color:#fff;
+
+	.bg-purple:hover {
+		background-color: #fff;
 		color: fuchsia;
 		border: 1px solid fuchsia;
 
 	}
-	.bg-white{
-		background-color:#fff; /* #8d53df; */
+
+	.bg-white {
+		background-color: #fff;
+		/* #8d53df; */
 	}
-		/*.shadow1{
+
+	/*.shadow1{
 			text-shadow: 2px 2px 4px #fff;
 			}*/
-		</style>
-		<body>
-			<div id="contenu" style="width:100%;height: 100vh;">				
-				<nav style="width:100%;height:10%;display: flex; justify-content:space-between;background-color: white;">
-					<div style="display: flex; justify-content: center;flex-direction: column; color:black;width: 10%;height: 100%;text-align: center;font-size: 18px;font-weight: bold;">
-						<div style='display:flex'>
-							<div> <img style='width:30px;height:30px;' src="{% static 'main/letter_e.png' %}"> </div>
-							<div class=""> verywhere </div>
-							<div>&nbsp;&nbsp;</div>
-							<div class="pl-3"><span class="badge bg-purple">Menu Rapide</span></div>
+</style>
+
+<body>
+	<div id="contenu" style="width:100%;height: 100vh;">
+		<nav style="width:100%;height:10%;display: flex; justify-content:space-between;background-color: white;">
+			<div
+				style="display: flex; justify-content: center;flex-direction: column; color:black;width: 10%;height: 100%;text-align: center;font-size: 18px;font-weight: bold;">
+				<div style='display:flex'>
+					<div> <img style='width:30px;height:30px;' src="{% static 'main/letter_e.png' %}"> </div>
+					<div class=""> verywhere </div>
+					<div>&nbsp;&nbsp;</div>
+					<div class="pl-3"><span class="badge bg-purple">Menu Rapide</span></div>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;flex-direction: column;padding-right:10px;">
+				<div><i class='fas fa-2x fa-bars text-purple'></i></div>
+			</div>
+		</nav>
+		<section style="width: 100%;height: 100%; display: flex; justify-content: center;">
+			<div class="d-none d-md-block" style='min-width: 300px;'><!-- position:absolute;width:100%; -->
+				<div style='text-align:center;width:100%;padding-top:10%;' class='txt-center h1 shadow1'> Trouvez votre
+					chez-vous partout </div>
+				<div style='text-align:center;width:100%;padding-top:1%;'>Plus de <b class='text-purple'>1200 offres</b>
+					disponibles </div>
+
+				<div style='width:100%;' class='mt-4 '>
+					<div class="text-center" style="text-align:center;"><small>Que Recherchez vous ?</small></div>
+					<div class='d-flex justify-content-center p-2'>
+						<a data-toggle="modal" data-target="#mainModal" class='d-block bg-purple text-center ' href="#"
+							style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;"
+							id="louer"> Je recherche un Espace</a>
+					</div>
+					<div class='d-flex justify-content-center p-2'>
+						<a data-toggle="modal" data-target="#mainModal" class='d-block bg-purple text-center ' href="#"
+							style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;"
+							id="louer2"> declarer une offre</a>
+					</div>
+				</div>
+
+				<div class="mt-5 px-2 pt-2">
+					<div class="pt-2" style="border-top:1px solid #ddd;">
+						<div class='d-flex justify-content-center p-2'>
+							<a class='d-block border-purple text-center text-purple ' href="#"
+								style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">
+								<i class="fas fa-file"></i> Documentation</a>
+						</div>
+						<div class='d-flex justify-content-center p-2'>
+							<a class='d-block border-purple text-center text-purple' href="#"
+								style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">
+								<i class="fas fa-globe"></i> Reseau Xerxes</a>
 						</div>
 					</div>
-					<div style="display: flex; justify-content: center;flex-direction: column;padding-right:10px;">
-						<div><i class='fas fa-2x fa-bars text-purple'></i></div>
-					</div>
-				</nav>
-				<section style="width: 100%;height: 100%; display: flex; justify-content: center;">
-					<div class="d-none d-md-block" style='min-width: 300px;'><!-- position:absolute;width:100%; -->
-						<div style='text-align:center;width:100%;padding-top:10%;' class='txt-center h1 shadow1'> Trouvez votre chez-vous partout </div>
-						<div style='text-align:center;width:100%;padding-top:1%;'>Plus de <b class='text-purple'>1200 offres</b> disponibles </div>
+					<div class='text-ceenter' style="text-align: center;"> <small> Copyright <a class="text-purple"
+								style="text-decoration:none:" href="https://xerxes.cm"> Xerxes </a> </small></div>
+				</div>
 
-						<div style='width:100%;' class='mt-4 '>
-							<div class="text-center" style="text-align:center;"><small>Que Recherchez vous ?</small></div>
-							<div class='d-flex justify-content-center p-2'>
-								<a data-toggle="modal" data-target="#mainModal" class='d-block bg-purple text-center ' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;" id="louer"> Je recherche un Espace</a>
-							</div>
-							<div class='d-flex justify-content-center p-2'>
-								<a data-toggle="modal" data-target="#mainModal" class='d-block bg-purple text-center ' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;" id="louer2"> declarer une offre</a>
-							</div>
-						</div>
-						
-						<div class="mt-5 px-2 pt-2">
-							<div  class="pt-2" style="border-top:1px solid #ddd;">
-								<div class='d-flex justify-content-center p-2'>
-									<a class='d-block border-purple text-center text-purple ' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;"> <i class="fas fa-file"></i> Documentation</a>
-								</div>
-								<div class='d-flex justify-content-center p-2'>
-									<a class='d-block border-purple text-center text-purple' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;"> <i class="fas fa-globe"></i> Reseau Xerxes</a>
-								</div>								
-							</div>
-							<div class='text-ceenter' style="text-align: center;"> <small> Copyright <a class="text-purple" style="text-decoration:none:" href="https://xerxes.cm"> Xerxes </a>  </small></div>
-						</div>
+			</div>
 
-					</div>
-					
-					<div style="display:flex;width: 100%;height: 100%;flex-wrap:wrap;">
-						<div style="background-image: url({% static 'main/back1.jpg' %});width: 100%;height: 100%;display: flex;justify-content: center;flex-direction: column;text-align: center;background-repeat: no-repeat;background-size: cover;">
-							<div style="display: flex;justify-content: center;flex-direction: column;padding-top:50px;width:100%;height:100%;background:rgba(250,250, 250, 0.5);">
-								<div class="h2 px-3"> <span class="h2 text-purple">EveryWhere</span>, Tous les bons plans immobiliers pres de chez vous</div>
-								<div class="text-center text-purple"><small style="font-weight:bold;">Mais au fait, c'est quoi un plan Immobilier ?</small></div>
-								<div class="text-center my-2 d-flex justify-content-center"><a class='d-block bg-purple text-center' data-toggle="modal" data-target="#mainModal" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">Commencer ma Recherche</a></div>
-								<div class="text-center d-flex d-md-none justify-content-center"><a class='d-block bg-purple text-center' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">Proposer une Offre</a></div>
+			<div style="display:flex;width: 100%;height: 100%;flex-wrap:wrap;">
+				<div
+					style="background-image: url({% static 'main/back1.jpg' %});width: 100%;height: 100%;display: flex;justify-content: center;flex-direction: column;text-align: center;background-repeat: no-repeat;background-size: cover;">
+					<div
+						style="display: flex;justify-content: center;flex-direction: column;padding-top:50px;width:100%;height:100%;background:rgba(250,250, 250, 0.5);">
+						<div class="h2 px-3"> <span class="h2 text-purple">EveryWhere</span>, Tous les bons plans
+							immobiliers pres de chez vous</div>
+						<a href="#" class="d-block text-center text-purple"><small style="font-weight:bold;">Mais au
+								fait, c'est quoi un plan Immobilier ?</small></a>
+						<div class="text-center my-2 d-flex justify-content-center"><a
+								class='d-block bg-purple text-center' data-toggle="modal" data-target="#mainModal"
+								style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">Commencer
+								ma Recherche</a></div>
+						<div class="text-center d-flex d-md-none justify-content-center"><a
+								class='d-block bg-purple text-center' href="#"
+								style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">Proposer
+								une Offre</a></div>
 
-								<!--
+						<!--
 									<div class="text-center d-flex d-md-none justify-content-center "><a class='d-block text-purple bg-light text-center' href="#" style="display:block;width:220px;  text-transform: capitalize; padding: 10px;  text-decoration: none;">Proposer une Offre</a></div> -->
-								</div>
-							</div>
-						</div>
+					</div>
+				</div>
+			</div>
 
-					<!--
+			<!--
 					<div style='display:flex;justify-content:center;flex-direction:column;width:100%;'>
 						<div style='display:flex;justify-content:center;padding:15px;'>
 							<div style='padding:5px;'>
@@ -137,127 +179,341 @@
 						</div>
 						<div  class='text-center mt-1'> De nombreux criteres pour selectionner le plan Immobilier qu'il vous faut. </div>
 					</div>
-				-->		
+				-->
 
-				
-			</section>
 
-			<div id="mainModal" class="modal" tabindex="-1" role="dialog" style="z-index:9999;">
-				<div class="modal-dialog modal-xl" role="document">
-					<div class="modal-content">
-						<div class="modal-header btn-warning text-dark">
-							<h5 class="modal-title text-purple"><i class="fa fa-home "></i> Formulaire de Recherche </h5>
+		</section>
+
+		<div id="mainModal" class="modal" tabindex="-1" role="dialog" style="z-index:9999;">
+			<div class="modal-dialog modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-header btn-warning text-dark">
+						<h5 class="modal-title text-purple"><i class="fa fa-home "></i> Formulaire de Recherche </h5>
+					</div>
+					<div class="text-center modal-body">
+
+						<div style="justify-content: space-between; " class="row col-lg-12 d-flex ">
+							<div class="col-lg-3 left-block">
+								<section class="section col-12 d-flex" style="flex-direction: column;">
+									<h3>Section</h3>
+									<br>
+									<div class="p-2"> <span data-index="0"
+											class="span badge text-purple border-purple">1</span>
+										<span>&nbsp;</span>
+										<span data-index="0" class="a1 text-center badge bg-purple">Type d'offre</span>
+									</div>
+									<div class="p-2"><span data-index="1"
+											class="span badge text-secondary border-secondary">2</span>
+										<span>&nbsp;</span>
+										<span data-index="1" class="a1 text-center badge text-secondary">Secteur
+											géographique</span>
+									</div>
+									<div class="p-2">
+										<span data-index="2" class="badge text-secondary border-secondary span">3</span>
+										<span>&nbsp;</span>
+										<span data-index="2" class="a1 text-center badge text-secondary">Budget</span>
+									</div>
+								</section>
+							</div>
+							<div id="offre" class="bl col-lg-9 p-4 right-block">
+								<div class="question-bloc">
+									<div class="h2">Que recherchez vous?</div>
+									<br>
+									<div style="border-bottom:1px solid #aaa;"
+										class=" pb-3 question-choices d-flex flex-wrap">
+										{% for item in list %}
+										<div class="p-2"><button class="btn-choi1 btn btn-purple">{{ item.description
+												}}</button></div>
+										{% endfor %}
+									</div>
+								</div>
+								<div class="text-purple my-3">
+									Selectionner un Type de Maison :
+								</div>
+								<div class="flex-wrap"
+									style="display: flex; margin-top: 20px;justify-content: space-between;">
+									{% for elt in types_HSE %}
+									<div class="element1 d-flex p-2">
+										<div class=" btn icon border-purple text-purple"> <i class="fas fa-home"
+												style="margin: 4px;"></i> </div>
+										<div class=" btn content text-purple">{{elt}}</div>
+										<div class="icon btn text-purple border-purple"> <i class="">?</i></div>
+									</div>
+									{% endfor %}
+									<!--
+											<div class="element1 d-flex p-2"><div class=" btn icon bg-purple"> <i class="fas fa-home" style="margin: 4px;"></i> </div><div class=" btn content text-purple">Tous</div><div class="icon btn text-purle border-purple"> <i class="">?</i></div></div>-->
+								</div>
+							</div>
+							<div id="secteur" class="bl col-lg-9 right-block" hidden>
+								<div class="h2"> Ou devons nous chercher </div>
+								<div class="col-12">
+									<div class="col-lg-6 p-2">
+										<div class="card col-lg-12 col-12">
+											<div class="text-right d-flex justify-content-between">
+												<div class="p-2">
+													<i class="btn btn-danger">x</i>
+												</div>
+											</div>
+											<div class="py-3 card-body">
+												<div class="py-2">
+													<label> Pays </label>
+													<select class=" select mt-1 form-control">
+														<option selected val="Cameroun">Cameroun</option>
+													</select>
+												</div>
+												<div>
+													<label> Region </label>
+													<select class="select form-control">
+														<option selected val="Centre">Centre</option>
+														<option val="0">Tous</option>
+													</select>
+												</div>
+												<div>
+													<label> Departement </label>
+													<select class="select form-control">
+														<option val="Departement">Mfoundi</option>
+														<option val="0">Tous</option>
+													</select>
+												</div>
+
+												<div>
+													<label> Ville </label>
+													<select class="select form-control">
+														<option val="Yaounde">Yaounde</option>
+														<option val="0">Tous</option>
+													</select>
+												</div>
+
+												<div>
+													<label> Quartier </label>
+													<select class="select form-control">
+														<option val="Cameroun">Total Ngousso</option>
+														<option val="0">Tous</option>
+													</select>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="py-3 d-flex">
+									<div class="px-3">
+										<div class="btn-success btn">
+											Ajouter Emplacement
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div id="budget" class="bl col-lg-9 right-block" hidden>
+								<div class="h2">Quel est votre Budget ?</div>
+								<div>
+									<div class=""> Dans le Cas de Maison a louer, le Budget doit inclure quelques mois
+										de loyer ( voire une caution ) </div>
+									<div>
+										<span class="btn btn-danger"> En Savoir plus</span>
+									</div>
+									<div class="py-3 ">
+										<input type="checkbox" name="">
+										<label> <b>Caution Negociable : <small>Vous pouvez negocier sur le nombre de
+													mois a payer avec le Proprietaire </small></b></label>
+									</div>
+								</div>
+								<div class="mb-4 d-flex justify-content-center">
+									<div class="px-2 d-flex">
+										<div class="py-2 px-2"><label> Je peux payer entre</label></div>
+										<div class="px-2 budget-value"><input type="number" class="form-control"
+												value="1000" name=""></div>
+									</div>
+									<div class="px-2 d-flex">
+										<div class="py-2 px-2"><label> Et </label></div>
+										<div class="px-2 budget-value"><input type="number" class="form-control"
+												value="999000000000" name=""></div>
+									</div>
+									<div class="text-purple"> FCFA</div>
+								</div>
+
+							</div>
 						</div>
-						<div class="text-center modal-body">
-
-							<div style="justify-content: space-between; " class="row col-lg-12 d-flex ">				
-								<div class="col-lg-3 left-block">
-									<section class="section d-flex" style="flex-direction: column;">
-										<h3>Section</h3>
-										<br>
-										<div data-index="0" class="a1 text-center badge bg-purple"><p style="color: black;"  class=" badge">Type d'offre</p></div>
-										<div data-index="1" class="a1 text-center"><p style="color: black;"   class="badge">Secteur géographique</p></div>
-										<div data-index="2" class="a1 text-center"><p style="color: black;"   class="badge">Budget</p></div>
-									</section>
-								</div>
-								<div id="offre" class="bl col-lg-9 right-block">
-									<div class="question-bloc">
-										<div class="h2">Que rechercher vous?</div>
-										<br>
-										<div class="question-choices d-flex flex-wrap">
-											{% for item in list %}
-											<div class="p-2"><button class="btn btn-purple">{{ item.description }}</button></div>
-											{% endfor %}
-										</div>							
-									</div>
-									<div style="display: flex; margin-top: 20px; flex-wrap: all; justify-content: space-between;">
-										<div class="element1 btn d-flex"><div class="icon"> <i class="fas fa-bed" style="margin: 4px;"></i> </div><div class="content">Chambre</div></div>
-										<div class="element2 btn d-flex"><div class="icon"> <i class="fas fa-home" style="margin: 4px;"></i> </div><div class="content">Maison</div></div>
-										<div class="element3 btn d-flex"><div class="icon"> <i class="fas fa-hotel" style="margin: 4px;"></i> </div><div class="content">Appartement</div></div>
+						<div class="d-flex justify-content-between modal-footer py-3">
+							<div class="p-2">
+								<div><small>Etape : </small></div>
+								<div>
+									<div style="width: 150px;" class="d-flex justify-content-between">
+										<div style="width:35px;height: 35px;border-radius:100%;" class="bg-purple py-1">
+											1</div>
+										<div style="width:35px;height: 35px;border-radius:100%;"
+											class="text-purple border-purple py-1">2</div>
+										<div style="width:35px;height: 35px;border-radius:100%;"
+											class="text-purple border-purple py-1">3</div>
 									</div>
 								</div>
-								<div id="secteur" class="bl col-lg-9 right-block" hidden>
-									<div class="h2">Secteur géographique</div>
-									<ul>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quam!</li>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quam!</li>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quam!</li>
-									</ul>
-
-								</div>
-								<div id="budget" class="bl col-lg-9 right-block" hidden>
-									<div class="h2">Budget</div>
-									<ul>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quam!</li>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quam!</li>
-										<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quam!</li>
-									</ul>
-
-								</div>
 							</div>
-							<div class="text-right modal-footer">
-								Copyright &copy;Xerxes
+							<div class="p-2">
+								<input style="border-radius:0px;" type="submit" value="Lancer la Recherche"
+									class="btn bg-purple" name="">
 							</div>
+							<!-- Copyright &copy;Xerxes -->
 						</div>
 					</div>
 				</div>
+			</div>
 
-<script>
+			<script>
+				/*
+										let btnChoi = document.getElementsByClassName("btn-choi1")
+										console.log(btnChoi)
+										//  
+										
+				
+										
+				
+				
+										
+										let tab =document.querySelectorAll('.bl')
+										console.log(tab)
+										let spanEl = document.querySelectorAll('.span')
+										let badgeEl =document.querySelectorAll('.a1')
+										console.log(badgeEl)
+										/* clique change class, hide other content and display 
+										function short(arr,arr1,el,span){
+											for(let i=0;i<arr.length;i++){
+												console.log(arr[i])	
+												arr[i].classList.remove('badge')
+												arr[i].classList.remove('bg-purple')
+											}
+											el.hidden=false
+											span.classList.add('badge')
+											for(let i=0;i<arr1.length;i++){
+												arr1[i].hidden=true
+											console.log("-----------------",arr1[i])
+											}
+				
+										}
+										const hideAndDisplay = function(par){
+											par.classList.add('bg-purple')
+											par.classList.add('badge')
+											console.log(par.dataset.index)
+											if (Number(par.dataset.index) === 1) {
+												short([badgeEl[0],badgeEl[2]],[tab[0],tab[2]],tab[1],spanEl[0])
+											} else if (Number(par.dataset.index) === 2) {
+												spanEl.classList.add('badge')
+				
+												short([badgeEl[0],badgeEl[1]],[tab[0],tab[1]],tab[2],spanEl[1])
+											} else{
+												short([badgeEl[1],badgeEl[2]],[tab[1],tab[2]],tab[0],spanEl[2])
+											}
+										}
+										for (let i = 0; i<badgeEl.length; i++) {
+											badgeEl[i].onclick = function(){hideAndDisplay(badgeEl[i])}	
+										}*/
 
-let tab =document.querySelectorAll('.bl')
-let badgeEl =document.querySelectorAll('.a1')
-/* clique change class, hide other content and display */
-function short(arr,arr1,el){
-	for(i in arr){
-		i.classList.remove('bg-purple')
-		i.classList.remove('badge')
-	}
-	el.hidden=false
-	for(i in arr1){
-		i.hidden=true
-	}
-}
-const hideAndDisplay = function(par){
-	par.classList.add('bg-purple')
-	par.classList.add('badge')
-	console.log(par.dataset.index)
-	if (Number(par.dataset.index) === 1) {
-		short([badgeEl[0],badgeEl[2]],[tab[0],tab[2]],tab[1])
-	} else if (Number(par.dataset.index) === 2) {
-		short([badgeEl[0],badgeEl[1]],[tab[0],tab[1]],tab[2])
-	} else{
-		short([badgeEl[1],badgeEl[2]],[tab[1],tab[2]],tab[0])
-	}
-}
-for (let i = 0; i<badgeEl.length; i++) {
-	badgeEl[i].onclick = function(){hideAndDisplay(badgeEl[i])}	
-}
-</script>
-					<!--- <div class='d-flex  p-2'>
+
+				let element1El = document.querySelectorAll('.element1')
+				let tabElement = [];
+				let btnChoi = document.getElementsByClassName("btn-choi1")
+				for (let i = 0; i < btnChoi.length; i++) {
+					btnChoi[i].classList.remove('item-selected-choix')
+					btnChoi[i].addEventListener('click', () => {
+						btnChoi[i].classList.toggle('item-selected-choix')
+						btnChoi[i].toggleAttribute("class", "btn-choi1 text-purple btn border-light")
+					})
+				}
+				function toggle(arr, el) {
+					const index = arr.indexOf(el);
+					(index !== -1) ? arr.splice(index, 1) : arr.push(el);
+				}
+				for (let i = 0; i < element1El.length; i++) {
+					element1El[i].classList.remove('item-selected')
+					element1El[i].addEventListener('click', () => {
+						element1El[i].classList.toggle('item-selected')
+						//verifie si l'element est deja present pour eviter des doublons
+						toggle(tabElement, element1El[i].textContent);
+					})
+				}
+
+				btnChoi[0].setAttribute("class", "btn-choi1 text-purple btn border-purple")
+
+				let actual_tab = 0
+				let tab = document.getElementsByClassName('.b1')
+				let badgeEl = document.getElementsByClassName('a1')
+				let cEl = document.getElementsByClassName('c1')
+				sections = ["offre", "secteur", "budget"]
+
+				for (var i = 0; i < badgeEl.length; i++) {
+					badgeEl[i].onclick = function () {
+						index = parseInt(this.getAttribute("data-index"));
+						for (var j = 0; j < badgeEl.length; j++) {
+
+							badgeEl[j].className = "a1 text-center badge text-secondary";
+							cEl[j].className = "c1 text-purple border-purple py-1";
+						}
+						this.className = "a1 text-center badge bg-purple"
+						cEl[index].className = "c1 bg-purple py-1"
+						$("#" + sections[actual_tab]).slideUp("slow", function () {
+							$("#" + sections[index]).slideDown("slow")
+						})
+						actual_tab = index;
+						//alert("ddd")
+					}
+				}
+				//Objet pour la collecte des données de l'utilisateur
+				let [pays, region, departement, ville, quartier] = document.querySelectorAll(".select option[selected]")
+				//Informations à propos du budget
+				let [budget_min, budget_max] = document.querySelectorAll('.budget-value input')
+				//selection d'un element
+				let natureChoix = document.querySelector('.item-selected-choix')
+				//Selection de plusieurs element recuperer dans un tableau
+				let typeOffre = tabElement;
+				//Pour chaque el select je cherche l'option avec lattribut selected
+				class Client {
+					constructor(natureChoix, typeOffre, emplacement, budget) {
+						this.natureChoix = natureChoix;
+						this.typeOffre = typeOffre;
+						this.emplacement = {
+							pays: pays.value,
+							region: region.value,
+							departement: departement.value,
+							ville: ville.value,
+							quartier: quartier.value,
+						};
+						this.budget = {
+							min: budget_min.value,
+							max: budget_max.value,
+						};
+					}
+
+				}
+
+			</script>
+			<!--- <div class='d-flex  p-2'>
 						<div class=''> Copyright <a href="https://xerxes.cm"> Xerxes </a> </div>
 						<div class='d-flex text-secondary'>
 							<div class='px-3'> Documentation </div>
 							<div> Contact </div>
 						</div> 
 					</div> -->
-				</body><!-- JavaScript Bundle with Popper -->
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body><!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+	crossorigin="anonymous"></script>
 
-				<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-				<script type="text/javascript">
-						/*
-						var louer=document.getElementById('louer');
-						var affiche=document.getElementById('affiche')
-						var fermer=document.getElementById('fermer')
-						louer.onclick = function (){
-							affiche.style.display = "block";
-						}
-						fermer.onclick=function(){
-							affiche.style.display="none";
-						}*/
-					</script>
-					
-					
-					
-					<!-- Prix Ville, Motif Type -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	/*
+	var louer=document.getElementById('louer');
+	var affiche=document.getElementById('affiche')
+	var fermer=document.getElementById('fermer')
+	louer.onclick = function (){
+		affiche.style.display = "block";
+	}
+	fermer.onclick=function(){
+		affiche.style.display="none";
+	}*/
+</script>
+
+
+
+<!-- Prix Ville, Motif Type -->
